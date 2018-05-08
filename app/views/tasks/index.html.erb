@@ -1,11 +1,13 @@
-<h1>MY TASKS>>>></h1>
-<br>
-<h1><% @tasks.each do |task| %></h1>
-<%= link_to task.title , task_path(task) %>
-<h6><%= task.completed %></h6>
-<%= link_to "Edit", edit_task_path(task)  %>
-<%= link_to "Delete", delete_task_path(task), method: :delete  %>
-<p>...............................</p>
-<% end %>
-<p>...............................</p>
-<%= link_to "Create a new task" , new_task_path %>
+<div class="container">
+  <h1 id="title">MY TASKS</h1>
+  <br>
+  <h1><% @tasks.each do |task| %></h1>
+  <div class="cards">
+    <%= link_to task.title , task_path(task) %>
+    <h6><%= task.completed %></h6>
+    <%= link_to "Edit", edit_task_path(task)  %>
+    <%= link_to "Delete", delete_task_path(task), method: :delete  %>
+  </div>
+  <% end %>
+  <%= link_to "Create a new task" , new_task_path %>
+</div>
