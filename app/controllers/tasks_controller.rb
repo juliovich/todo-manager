@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  resources :tasks
+
 
   def index
   end
